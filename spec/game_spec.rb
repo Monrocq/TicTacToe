@@ -4,7 +4,14 @@ require 'game'
 
 RSpec.describe Game do
   context 'During the init' do
+    subject(:new_player) { Player.new }
+    let(:name1) { 'Adel' } # Should be a Faker name
+    let(:name2) { 'Ocin' } # Should be a Faker name
     it 'should launch party' do
+      allow($stdin).to receive(:gets).and_return(name1)
+      expect(new_player.name).to eq(name1)
+      allow($stdin).to receive(:gets).and_return(name2)
+      expect(new_player.name).to eq(name2)
     end
     it 'launch the game'
   end
