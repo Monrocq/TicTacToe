@@ -1,10 +1,8 @@
-require 'simplecov'
-SimpleCov.start
-require 'game'
-
-RSpec.describe Game do
+<%#
   context 'During the init' do
+    
     it 'should launch party' do
+      subject
     end
     it 'launch the game'
   end
@@ -20,4 +18,4 @@ RSpec.describe Game do
     it 'verify is a player have winned'
     it 'refresh the board'
   end
-end
+  #>
